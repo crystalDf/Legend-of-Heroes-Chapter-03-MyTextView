@@ -55,11 +55,14 @@ public class MyEnhancedTextView extends TextView {
 
         if (mMatrix != null) {
             mTranslate += (mViewWidth / 5);
+
             if (mTranslate > (2 * mViewWidth)) {
                 mTranslate = -mViewWidth;
             }
+
             mMatrix.setTranslate(mTranslate, 0);
             mLinearGradient.setLocalMatrix(mMatrix);
+
             postInvalidateDelayed(100);
         }
     }
